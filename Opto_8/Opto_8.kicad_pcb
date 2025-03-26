@@ -6,9 +6,9 @@
 
   (paper "A4")
   (title_block
-    (title "IO_16x8_matrix")
-    (date "2024-12-01")
-    (rev "1.0.0")
+    (title "Opto_8")
+    (date "2025-03-26")
+    (rev "0.1.0")
   )
 
   (layers

@@ -5,9 +5,9 @@
   (paper "A4")
 
   (title_block
-    (title "IO_16x8_matrix")
-    (date "2024-12-01")
-    (rev "1.0.0")
+    (title "Opto_8")
+    (date "2025-03-26")
+    (rev "0.1.0")
   )
 
   (lib_symbols
@@ -1631,7 +1631,7 @@
     (property "Reference" "R37" (id 0) (at 212.09 121.9199 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "2k" (id 1) (at 212.09 124.4599 0)
+    (property "Value" "1k" (id 1) (at 212.09 124.4599 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric" (id 2) (at 207.772 123.19 90)
