@@ -55,6 +55,6 @@ There are 2 groups of inputs, each with 8 channels:
 One special output is available for high speed signals. The voltage is 5 V, it is a push pull output that can drive a current up to 8 mA. It can be used to e.g. control a WS2812 LED strip.
 
 ## Connectors
-There are pads for connectors that fit one half of the A-16998.1 board (you have to rearrange the key pins for the other half). Additionally there are pins for single parts in 2.54 mm pitch.
+There are pads for connectors that fit one half of the A-16998.1 board (for the other half you need a 2nd Opto_8 board and you have to rearrange the key pins at the connectors). Additionally there are pins for single LEDs (transmitter and receiver) in 2.54 mm pitch.
 
 
