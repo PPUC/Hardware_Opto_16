@@ -11,18 +11,19 @@ To make use of anything of this project a basic understanding of electronics and
 -->
 
 ## Name
-Opto_8 as it has 8 inputs and 8 led divers. Additionally it has one special output.  
-Actually it has 16 inputs: 8 per type of input (photo diode or photo transistor). See sections "Application" and "Inputs" below for more information.
+Opto_16 as it has 16 inputs and 16 led divers. Additionally it has one special output.  
 
 ## Application
 Please be aware that in pinball many different opto types are used. You have to know which type of opto coupling you need for your purpose. I found the following types:
 * Optos with photo transistors as a receiver and common collector (used for example in Dirty Harry with board A-16998.1).
-* Optos with photo transistors as a receiver and common emitter (used for example in Rollergames with board C-13205). Commonly used for drop targets.
+* Optos with photo transistors as a receiver and common emitter (used for example in Rollergames with board C-13205). Commonly used for drop targets and flipper buttons.
 * Optos with photo diodes as a receiver (used for example in World Poker Tour with board 520-5239-01).
 
 The transmitter LEDs I've seen so far, are either single (2 pins) or share a common cathode.
 
-This Opto_8 PCB can be used to drive transmitter LEDs from a 5 V power supply and can cope with common collector photo transistors and photo diodes.  
+This Opto_16 PCB can be used to drive transmitter LEDs from a 5 V power supply and can cope with common collector photo transistors and photo diodes.  
+There are 2 groups of inputs (2 x 8). One group is for photo transistors. The other group can be configured to be inputs for photo diode or photo transistor. Jumpers are used for configuration. You can only change the whole group (8 inputs), not a single channel. If no jumper is placed (all open) then the configurable group of 8 inputs are good for photo diodes. If you want them to be for photo transistors you have to close jumper JP2 and also put jumpers on the channel-connectors J17 to J24. Actually only the connectors for used channels has to be shorted by a jumper, not used channel can be left open.  
+
 If you have an application with common emitters you can use the inputs of the switch-matrix board (IO_16x8_matrix) of the PPUC project. The inputs of the standard IO board (IO_16_8_1) should work as well. In either case you need to drive the transmitter LED with a constant current of about 20 mA. This can be done with a 180 Ohm resistor at a 5 V supply (you have to wire this yourself).
 
 If you have an opto board already (e.g. from an existing pinball machine) you can use this with the inputs of the switch-matrix board (IO_16x8_matrix) or the inputs of the standard IO board (IO_16_8_1). Connect the output transistor of the opto board to the input of the PPUC board in a way that the transistor switches to ground. Be aware that opto boards are powered with either 12 V or 5 V in existing pinball machines. Both can be used with PPUC.
@@ -44,7 +45,7 @@ A RP2040 is used for it's cost/performance ratio. It is the same controller that
 * DIP-switches: usually used to select an address for RS485 (16 combinations)
 
 ## LED drivers
-There are 8 outputs. Each of them drives one LED (usually red or infra red).
+There are 16 outputs. Each of them drives one LED (usually red or infra red).
 
 ## Inputs
 There are 2 groups of inputs, each with 8 channels:
@@ -55,6 +56,6 @@ There are 2 groups of inputs, each with 8 channels:
 One special output is available for high speed signals. The voltage is 5 V, it is a push pull output that can drive a current up to 8 mA. It can be used to e.g. control a WS2812 LED strip.
 
 ## Connectors
-There are pads for connectors that fit one half of the A-16998.1 board (for the other half you need a 2nd Opto_8 board and you have to rearrange the key pins at the connectors). Additionally there are pins for single LEDs (transmitter and receiver) in 2.54 mm pitch.
+There are pads for connectors that fit the A-16998.1 board. Additionally for 8 inputs and drivers there are pins for single LEDs (transmitter and receiver) in 2.54 mm pitch.
 
 

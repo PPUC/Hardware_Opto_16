@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name "PPUC_LOGO_LIB")(type "KiCad")(uri "${KIPRJMOD}/logo.kicad_sym")(options "")(descr ""))
-)

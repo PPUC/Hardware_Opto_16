@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name "Out_8x10")(type "KiCad")(uri "${KIPRJMOD}/Opto_8.pretty")(options "")(descr ""))
-  (lib (name "IO_16x8_matrix")(type "KiCad")(uri "${KIPRJMOD}/Opto_8.pretty")(options "")(descr ""))
-)
