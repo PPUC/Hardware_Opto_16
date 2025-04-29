@@ -1,3 +1,10 @@
+2025-04-29  foenich
+
+	Released Version 1.0.0
+	Renamed project from Opto_8 to Opto_16
+	Chagned number of channels from 8 to 16
+	Added connector and filters for spare ADCs and GPIOs
+	Routed PCB
 	
 
 2025-03-26  foenich

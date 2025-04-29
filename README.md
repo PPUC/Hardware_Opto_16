@@ -55,6 +55,10 @@ There are 2 groups of inputs, each with 8 channels:
 ## Special Output
 One special output is available for high speed signals. The voltage is 5 V, it is a push pull output that can drive a current up to 8 mA. It can be used to e.g. control a WS2812 LED strip.
 
+## Additional analog functions
+* There are 2 ADC channels from the RP2040 made accessible through a connector. Filtered by a 1st order low pass (1k/100n, fg = 1.6 kHz).
+* 6 GPIOs are also routed to this connector. They are also filtered by a 1st order low pass (1k/100n, fg = 1.6 kHz) and could be used for analog output per PWM.
+
 ## Connectors
 There are pads for connectors that fit the A-16998.1 board. Additionally for 8 inputs and drivers there are pins for single LEDs (transmitter and receiver) in 2.54 mm pitch.
 
