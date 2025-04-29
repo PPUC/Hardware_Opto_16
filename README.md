@@ -22,7 +22,7 @@ Please be aware that in pinball many different opto types are used. You have to 
 The transmitter LEDs I've seen so far, are either single (2 pins) or share a common cathode.
 
 This Opto_16 PCB can be used to drive transmitter LEDs from a 5 V power supply and can cope with common collector photo transistors and photo diodes.  
-There are 2 groups of inputs (2 x 8). One group is for photo transistors. The other group can be configured to be inputs for photo diode or photo transistor. Jumpers are used for configuration. You can only change the whole group (8 inputs), not a single channel. If no jumper is placed (all open) then the configurable group of 8 inputs are good for photo diodes. If you want them to be for photo transistors you have to close jumper JP2 and also put jumpers on the channel-connectors J17 to J24. Actually only the connectors for used channels has to be shorted by a jumper, not used channel can be left open.  
+There are 2 groups of inputs (2 x 8). One group is for photo transistors. The other group can be configured to be inputs for photo diode or photo transistor. Jumpers are used for configuration. You can only change the whole group (8 inputs), not a single channel. If no jumper is placed (all open) then the configurable group of 8 inputs are good for photo diodes. If you want them to be for photo transistors you have to close jumper JP2 and also put jumpers on the channel-connectors J18 to J25. Actually only the connectors for used channels has to be shorted by a jumper, not used channel can be left open.  
 
 If you have an application with common emitters you can use the inputs of the switch-matrix board (IO_16x8_matrix) of the PPUC project. The inputs of the standard IO board (IO_16_8_1) should work as well. In either case you need to drive the transmitter LED with a constant current of about 20 mA. This can be done with a 180 Ohm resistor at a 5 V supply (you have to wire this yourself).
 
@@ -56,8 +56,8 @@ There are 2 groups of inputs, each with 8 channels:
 One special output is available for high speed signals. The voltage is 5 V, it is a push pull output that can drive a current up to 8 mA. It can be used to e.g. control a WS2812 LED strip.
 
 ## Additional analog functions
-* There are 2 ADC channels from the RP2040 made accessible through a connector. Filtered by a 1st order low pass (1k/100n, fg = 1.6 kHz).
-* 6 GPIOs are also routed to this connector. They are also filtered by a 1st order low pass (1k/100n, fg = 1.6 kHz) and could be used for analog output per PWM.
+* There are 2 ADC channels from the RP2040 made accessible through a connector. Filtered by a 1st order low pass (1 kOhm/100 nF, fg = 1.6 kHz).
+* 6 GPIOs are also routed to this connector. They are also filtered by a 1st order low pass (1 kOhm/100 nF, fg = 1.6 kHz) and could be used for analog output per PWM.
 
 ## Connectors
 There are pads for connectors that fit the A-16998.1 board. Additionally for 8 inputs and drivers there are pins for single LEDs (transmitter and receiver) in 2.54 mm pitch.
